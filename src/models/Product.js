@@ -42,10 +42,7 @@ const productSchema = new Schema(
                 star: Number,
                 comment: String,
                 reviewedAt: Date,
-                postedBy: {
-                    type: ObjectId,
-                    ref: "User",
-                },
+                postedBy: String,
             },
         ],
     },

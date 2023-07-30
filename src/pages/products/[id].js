@@ -6,6 +6,8 @@ import Product from "@/models/Product";
 import StarRatings from "react-star-ratings";
 import Image from "next/image";
 import { AvgRating } from "@/lib/utils/avgRating";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const ProductDetails = ({ product, keyFeatureValue }) => {
     const [comment, setComment] = useState("");
@@ -21,20 +23,17 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
                 comment: comment,
                 star: star,
             };
-            if (user && user.token) {
-                productRating(user.token, _id, reviewObject)
-                    .then((res) => {
-                        refreshData();
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    });
-            }
+          
+                const { data } = await axios.put(
+                    `/api/product/${product._id}/review`,
+                    reviewObject
+                );
+                console.log(data);
+                toast.success("Review added successfully!");
+            
             setComment("");
         } catch (error) {
-           
-                toast.error(error.message);
-           
+            toast.error(error.message);
         }
     };
     return (
@@ -119,11 +118,8 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
                                 name={product?.title}
                             />
                             <div className="mt-5">
-                                <input
-                                    type="submit"
-                                    value="Review Submit"
-                                    className="btn btn-sm capitalize hover:bg-transparent hover:text-primary text-white btn-primary"
-                                />
+                            <button  type="submit" className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-0 focus:outline-none focus:ring-lime-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Review Submit</button>
+                               
                             </div>
                         </form>
                     </div>
