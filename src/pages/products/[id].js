@@ -79,6 +79,15 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
                                         : {keyFeature?.value}
                                     </li>
                                 ))}
+                                 <li
+                                       
+                                        className="border-b-2 border-primary mb-3 text-lg"
+                                    >
+                                        <span className="font-bold text-gray-700 text-base">
+                                           Status
+                                        </span>
+                                        : {product?.status}
+                                    </li>
                             </ul>
                         </div>
                     </div>

@@ -1,12 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import {  useDispatch } from 'react-redux'
 import _ from "lodash";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdPageview } from "react-icons/md";
 import { AvgRating } from "@/lib/utils/avgRating";
+import { useRouter } from "next/router";
+import { addProductForPCBuilder } from "@/store/features/product/productSlice";
 
 const Feature = ({ product, isAddToBuilder = false }) => {
     const isAddToCart = [];
+    const router = useRouter();
+    const dispatch = useDispatch()
+
+    const handleAddProductForPCBuilder = (data) => {
+        dispatch(addProductForPCBuilder(data))
+        router.push(`/PCBuilder`);
+    }
 
     return (
         <div className="rounded-lg shadow-xl group cursor-pointer">
@@ -22,9 +32,9 @@ const Feature = ({ product, isAddToBuilder = false }) => {
                             data-tip={
                                 isAddToCart?.length > 0
                                     ? "Already To Cart"
-                                    : "Add To Cart"
+                                    : "Add Product For PCBuilder"
                             }
-                            onClick={() => handleAddCart()}
+                            onClick={() => handleAddProductForPCBuilder(product)}
                         >
                             <FaShoppingCart />
                         </li>
