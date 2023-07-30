@@ -1,0 +1,246 @@
+[
+    {
+        "title": "Ryzan Core i9-11900K",
+        "category": "CPU / Processor",
+        "status": "In Stock",
+        "price": "$449.00",
+        "description": "The Ryzan Core i9-11900K is a powerful CPU with high clock speeds and excellent single-core performance.",
+        "keyFeatures": "Brand - Ryzan, Model - Core i9-11900K, Cores - 8, Threads - 16, Base Clock - 3.5GHz, Max Turbo Clock - 5.3GHz, Socket - LGA1200",
+        "ratings": []
+    },
+    {
+        "title": "LMN Ryzen 9 5900X",
+        "category": "CPU / Processor",
+        "status": "In Stock",
+        "price": "$529.99",
+        "description": "The LMN Ryzen 9 5900X is a top-tier CPU with 12 cores and 24 threads, perfect for enthusiasts.",
+        "keyFeatures": "Brand - LMN, Model - Ryzen 9 5900X, Cores - 12, Threads - 24, Base Clock - 3.7GHz, Max Boost Clock - 4.8GHz, Socket - AM4",
+
+        "ratings": []
+    },
+    {
+        "title": "PQR Core i5-11600K",
+        "category": "CPU / Processor",
+        "status": "In Stock",
+        "price": "$289.00",
+        "description": "The PQR Core i5-11600K is a reliable and high-performance CPU that suits both gaming and productivity.",
+        "keyFeatures": "Brand - PQR, Model - Core i5-11600K, Cores - 6, Threads - 12, Base Clock - 3.9GHz, Max Turbo Clock - 4.9GHz, Socket - LGA1200",
+
+        "ratings": []
+    },
+    {
+        "title": "UVW Ryzen 5 5600X",
+        "category": "CPU / Processor",
+        "status": "In Stock",
+        "price": "$229.99",
+        "description": "The UVW Ryzen 5 5600X is a budget-friendly CPU with 6 cores and 12 threads, suitable for casual gamers and multitaskers.",
+        "keyFeatures": "Brand - UVW, Model - Ryzen 5 5600X, Cores - 6, Threads - 12, Base Clock - 3.7GHz, Max Boost Clock - 4.6GHz, Socket - AM4",
+
+        "ratings": []
+    },
+
+    {
+        "title": "LMN Pro Gaming X570",
+        "category": "Motherboard",
+        "status": "In Stock",
+        "price": "$279.99",
+        "description": "The LMN Pro Gaming X570 is a high-end motherboard designed for extreme gaming and overclocking.",
+        "keyFeatures": "Brand - LMN, Model - Pro Gaming X570, Socket - AM4, Chipset - AMD X570, RAM Slots - 4, M.2 Slots - 3, PCIe Slots - 4",
+
+        "ratings": []
+    },
+    {
+        "title": "PQR Creator Pro B550",
+        "category": "Motherboard",
+        "status": "In Stock",
+        "price": "$189.00",
+        "description": "The PQR Creator Pro B550 is a workstation-grade motherboard built for content creators and professionals.",
+        "keyFeatures": "Brand - PQR, Model - Creator Pro B550, Socket - AM4, Chipset - AMD B550, RAM Slots - 4, M.2 Slots - 2, PCIe Slots - 3",
+
+        "ratings": []
+    },
+    {
+        "title": "HP ROG Strix Z590-E",
+        "category": "Motherboard",
+        "status": "In Stock",
+        "price": "$329.99",
+        "description": "The HP ROG Strix Z590-E is a premium gaming motherboard with extensive RGB lighting and robust power delivery.",
+        "keyFeatures": "Brand - HP, Model - ROG Strix Z590-E, Socket - LGA1200, Chipset - Intel Z590, RAM Slots - 4, M.2 Slots - 3, PCIe Slots - 3",
+
+        "ratings": []
+    },
+    {
+        "title": "UVW Mini-ITX B450",
+        "category": "Motherboard",
+        "status": "In Stock",
+        "price": "$149.00",
+        "description": "The UVW Mini-ITX B450 is a compact and feature-rich motherboard suitable for small form factor builds.",
+        "keyFeatures": "Brand - UVW, Model - Mini-ITX B450, Socket - AM4, Chipset - AMD B450, RAM Slots - 2, M.2 Slots - 1, PCIe Slots - 1",
+
+        "ratings": []
+    },
+
+    {
+        "title": "Ryzan HyperX Fury 32GB",
+        "category": "RAM",
+        "status": "In Stock",
+        "price": "$189.99",
+        "description": "The Ryzan HyperX Fury 32GB is a high-capacity DDR4 RAM module for power users and content creators.",
+        "keyFeatures": "Brand - Ryzan, Model - HyperX Fury, Capacity - 32GB (2x16GB), Speed - 3200MHz, CAS Latency - 18, RGB Lighting - No",
+
+        "ratings": []
+    },
+    {
+        "title": "HP Vengeance LPX 64GB",
+        "category": "RAM",
+        "status": "In Stock",
+        "price": "$299.00",
+        "description": "The HP Vengeance LPX 64GB is a high-speed DDR4 RAM kit designed for enthusiasts and professionals.",
+        "keyFeatures": "Brand - HP, Model - Vengeance LPX, Capacity - 64GB (2x32GB), Speed - 3600MHz, CAS Latency - 18, RGB Lighting - No",
+
+        "ratings": []
+    },
+    {
+        "title": "MNO Corsair Dominator Platinum RGB 16GB",
+        "category": "RAM",
+        "status": "In Stock",
+        "price": "$169.99",
+        "description": "The MNO Corsair Dominator Platinum RGB 16GB offers premium aesthetics and top-notch performance.",
+        "keyFeatures": "Brand - MNO, Model - Dominator Platinum RGB, Capacity - 16GB (2x8GB), Speed - 4000MHz, CAS Latency - 19, RGB Lighting - Yes",
+
+        "ratings": []
+    },
+    {
+        "title": "PQR Ripjaws V 16GB",
+        "category": "RAM",
+        "status": "In Stock",
+        "price": "$109.00",
+        "description": "The PQR Ripjaws V 16GB is a cost-effective DDR4 RAM kit with excellent reliability and performance.",
+        "keyFeatures": "Brand - PQR, Model - Ripjaws V, Capacity - 16GB (2x8GB), Speed - 3000MHz, CAS Latency - 16, RGB Lighting - No",
+
+        "ratings": []
+    },
+
+    {
+        "title": "LMN Gold 750W",
+        "category": "Power Supply Unit",
+        "status": "Out of Stock",
+        "price": "$119.00",
+        "description": "The LMN Gold 750W PSU provides reliable power delivery and is 80 Plus Gold certified for energy efficiency.",
+        "keyFeatures": "Brand - LMN, Model - Gold 750W, Wattage - 750W, Efficiency - 80 Plus Gold, Modular - Semi, Cooling - 120mm Fan",
+
+        "ratings": []
+    },
+    {
+        "title": "Ryzan Platinum 850W",
+        "category": "Power Supply Unit",
+        "status": "In Stock",
+        "price": "$169.99",
+        "description": "The Ryzan Platinum 850W PSU offers high efficiency and stable power output for demanding systems.",
+        "keyFeatures": "Brand - Ryzan, Model - Platinum 850W, Wattage - 850W, Efficiency - 80 Plus Platinum, Modular - Fully, Cooling - 140mm Fan",
+
+        "ratings": []
+    },
+    {
+        "title": "HP Titanium 1000W",
+        "category": "Power Supply Unit",
+        "status": "In Stock",
+        "price": "$249.00",
+        "description": "The HP Titanium 1000W PSU is a high-performance unit with 80 Plus Titanium certification for maximum efficiency.",
+        "keyFeatures": "Brand - HP, Model - Titanium 1000W, Wattage - 1000W, Efficiency - 80 Plus Titanium, Modular - Fully, Cooling - 160mm Fan",
+
+        "ratings": []
+    },
+    {
+        "title": "DEF Bronze 600W",
+        "category": "Power Supply Unit",
+        "status": "In Stock",
+        "price": "$79.99",
+        "description": "The DEF Bronze 600W PSU is a budget-friendly option with reliable performance for basic gaming and tasks.",
+        "keyFeatures": "Brand - DEF, Model - Bronze 600W, Wattage - 600W, Efficiency - 80 Plus Bronze, Modular - No, Cooling - 120mm Fan",
+
+        "ratings": []
+    },
+
+    {
+        "title": "HP SATA SSD 500GB",
+        "category": "Storage Device",
+        "status": "In Stock",
+        "price": "$89.99",
+        "description": "The HP SATA SSD 500GB provides reliable storage with fast read and write speeds.",
+        "keyFeatures": "Brand - HP, Model - SATA SSD 500GB, Capacity - 500GB, Interface - SATA III, Read Speed - 550MB/s, Write Speed - 520MB/s",
+
+        "ratings": []
+    },
+    {
+        "title": "Ryzan External HDD 2TB",
+        "category": "Storage Device",
+        "status": "In Stock",
+        "price": "$79.99",
+        "description": "The Ryzan External HDD 2TB offers large capacity storage for your backups and media files.",
+        "keyFeatures": "Brand - Ryzan, Model - External HDD 2TB, Capacity - 2TB, Interface - USB 3.0, Transfer Rate - 5Gbps",
+
+        "ratings": []
+    },
+    {
+        "title": "MNO Thunderbolt 3 SSD 2TB",
+        "category": "Storage Device",
+        "status": "Out of Stock",
+        "price": "$349.00",
+        "description": "The MNO Thunderbolt 3 SSD 2TB offers lightning-fast data transfer speeds and is perfect for video editing.",
+        "keyFeatures": "Brand - MNO, Model - Thunderbolt 3 SSD 2TB, Capacity - 2TB, Interface - Thunderbolt 3, Read Speed - 2800MB/s, Write Speed - 2400MB/s",
+
+        "ratings": []
+    },
+    {
+        "title": "PQR microSD Card 256GB",
+        "category": "Storage Device",
+        "status": "In Stock",
+        "price": "$39.99",
+        "description": "The PQR microSD Card 256GB is a high-capacity storage solution for smartphones and cameras.",
+        "keyFeatures": "Brand - PQR, Model - microSD Card 256GB, Capacity - 256GB, Interface - microSDXC, Read Speed - 100MB/s, Write Speed - 80MB/s",
+
+        "ratings": []
+    },
+
+    {
+        "title": "LMN UltraWide Monitor 34\"",
+        "category": "Monitor",
+        "status": "In Stock",
+        "price": "$549.00",
+        "description": "The LMN UltraWide Monitor offers a 34-inch immersive display with an ultrawide aspect ratio.",
+        "keyFeatures": "Brand - LMN, Model - UltraWide Monitor 34, Screen Size - 34\", Resolution - 3440x1440, Refresh Rate - 100Hz, Response Time - 5ms, Panel Type - VA, Aspect Ratio - 21:9",
+
+        "ratings": []
+    },
+    {
+        "title": "Ryzan 4K HDR Monitor 32\"",
+        "category": "Monitor",
+        "status": "In Stock",
+        "price": "$799.99",
+        "description": "The Ryzan 4K HDR Monitor delivers stunning visuals with its high-resolution display and HDR support.",
+        "keyFeatures": "Brand - Ryzan, Model - 4K HDR Monitor 32, Screen Size - 32\", Resolution - 3840x2160, Refresh Rate - 60Hz, Response Time - 4ms, Panel Type - IPS, HDR Support - Yes",
+
+        "ratings": []
+    },
+    {
+        "title": "HP Curved Gaming Monitor 27\"",
+        "category": "Monitor",
+        "status": "Out of Stock",
+        "price": "$499.00",
+        "description": "The HP Curved Gaming Monitor offers a 27-inch curved display for immersive gaming sessions.",
+        "keyFeatures": "Brand - HP, Model - Curved Gaming Monitor 27, Screen Size - 27\", Resolution - 2560x1440, Refresh Rate - 165Hz, Response Time - 1ms, Panel Type - VA, Curvature - 1500R",
+
+        "ratings": []
+    },
+    {
+        "title": "PQR Portable Monitor 15.6\"",
+        "category": "Monitor",
+        "status": "In Stock",
+        "price": "$199.99",
+        "description": "The PQR Portable Monitor is a slim and lightweight 15.6-inch display ideal for on-the-go productivity.",
+        "keyFeatures": "Brand - PQR, Model - Portable Monitor 15.6, Screen Size - 15.6\", Resolution - 1920x1080, Refresh Rate - 60Hz, Response Time - 3ms, Panel Type - IPS, Connectivity - USB-C",
+
+        "ratings": []
+    }
+]

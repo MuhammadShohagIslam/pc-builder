@@ -11,12 +11,6 @@ const productSchema = new Schema(
             maxLength: 32,
             text: true,
         },
-        slug: {
-            type: String,
-            unique: true,
-            lowercase: true,
-            index: true,
-        },
         description: {
             type: String,
             required: true,
@@ -39,9 +33,9 @@ const productSchema = new Schema(
         images: {
             type: String,
         },
-        stock: {
+        status: {
             type: String,
-            enum: ["Yes", "No"],
+            enum: ["In Stock", "Out Stock"],
         },
         ratings: [
             {
