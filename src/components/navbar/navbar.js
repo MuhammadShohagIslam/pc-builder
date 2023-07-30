@@ -8,7 +8,7 @@ const Navbar = () => {
             <nav className="flex justify-between bg-white shadow-md text-gray-900">
                 <div className="px-5 relative xl:px-12 py-6 justify-between flex w-full items-center">
                     {/* Logo */}
-                    <Link className="text-3xl font-bold font-heading" href="#">
+                    <Link className="text-3xl font-bold font-heading" href="/">
                     Shohag PCBuilder
                     </Link>
                     {/* Category and Login */}
@@ -29,9 +29,9 @@ const Navbar = () => {
                                 >
                                     <path
                                         stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
                                         d="m1 1 4 4 4-4"
                                     />
                                 </svg>
@@ -40,62 +40,56 @@ const Navbar = () => {
                                 <div className="flex absolute space-x-5">
                                     <div className="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
                                         <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-                                            <li>
+                                            <li    onClick={() => setOpenCategory(!openCategory)}  >
                                                 <Link
-                                                    href="#"
-                                                    className="block px-4 py-2 hover:bg-gray-100 "
+                                                className="block px-4 py-2 hover:bg-gray-100 "
+                                                    href={`/category/CPU`}
+                                                   
                                                 >
-                                                    Processor
+                                                    CPU
                                                 </Link>
                                             </li>
-                                            <li>
+                                            <li    onClick={() => setOpenCategory(!openCategory)}>
                                                 <Link
-                                                    href="#"
+                                                    href={`/category/Motherboard`}
                                                     className="block px-4 py-2 hover:bg-gray-100 "
                                                 >
                                                     Motherboard
                                                 </Link>
                                             </li>
-                                            <li>
+                                            <li    onClick={() => setOpenCategory(!openCategory)}>
                                                 <Link
-                                                    href="#"
+                                                     href={`/category/RAM`}
                                                     className="block px-4 py-2 hover:bg-gray-100 "
                                                 >
                                                     RAM
                                                 </Link>
                                             </li>
-                                            <li>
+                                            <li    onClick={() => setOpenCategory(!openCategory)}>
                                                 <Link
-                                                    href="#"
+                                                     href={`/category/Power Supply Unit`}
                                                     className="block px-4 py-2 hover:bg-gray-100 "
                                                 >
                                                     Power Supply Unit
                                                 </Link>
                                             </li>
-                                            <li>
+                                            <li    onClick={() => setOpenCategory(!openCategory)}>
                                                 <Link
-                                                    href="#"
+                                                     href={`/category/Storage Device`}
                                                     className="block px-4 py-2 hover:bg-gray-100 "
                                                 >
                                                     Storage Device
                                                 </Link>
                                             </li>
-                                            <li>
+                                            <li    onClick={() => setOpenCategory(!openCategory)}>
                                                 <Link
-                                                    href="#"
+                                                    href={`/category/Monitor`}
                                                     className="block px-4 py-2 hover:bg-gray-100 "
                                                 >
                                                     Monitor
                                                 </Link>
                                             </li>
-                                            <li>
-                                                <Link
-                                                    href="#"
-                                                    className="block px-4 py-2 hover:bg-gray-100 "
-                                                >
-                                                    Others
-                                                </Link>
-                                            </li>
+                                           
                                         </ul>
                                     </div>
                                 </div>
@@ -114,9 +108,9 @@ const Navbar = () => {
                                     stroke="currentColor"
                                 >
                                     <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
                                         d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                                     />
                                 </svg>
@@ -134,9 +128,9 @@ const Navbar = () => {
                         stroke="currentColor"
                     >
                         <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                             strokeWidth="2"
                             d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                         />
                     </svg>
@@ -157,9 +151,9 @@ const Navbar = () => {
                         stroke="currentColor"
                     >
                         <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                             strokeWidth="2"
                             d="M4 6h16M4 12h16M4 18h16"
                         />
                     </svg>

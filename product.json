@@ -1,7 +1,7 @@
 [
     {
         "title": "Ryzan Core i9-11900K",
-        "category": "CPU / Processor",
+        "category": "CPU",
         "status": "In Stock",
         "price": "$449.00",
         "description": "The Ryzan Core i9-11900K is a powerful CPU with high clock speeds and excellent single-core performance.",
@@ -10,7 +10,7 @@
     },
     {
         "title": "LMN Ryzen 9 5900X",
-        "category": "CPU / Processor",
+        "category": "CPU",
         "status": "In Stock",
         "price": "$529.99",
         "description": "The LMN Ryzen 9 5900X is a top-tier CPU with 12 cores and 24 threads, perfect for enthusiasts.",
@@ -20,7 +20,7 @@
     },
     {
         "title": "PQR Core i5-11600K",
-        "category": "CPU / Processor",
+        "category": "CPU",
         "status": "In Stock",
         "price": "$289.00",
         "description": "The PQR Core i5-11600K is a reliable and high-performance CPU that suits both gaming and productivity.",
@@ -30,7 +30,7 @@
     },
     {
         "title": "UVW Ryzen 5 5600X",
-        "category": "CPU / Processor",
+        "category": "CPU",
         "status": "In Stock",
         "price": "$229.99",
         "description": "The UVW Ryzen 5 5600X is a budget-friendly CPU with 6 cores and 12 threads, suitable for casual gamers and multitaskers.",
