@@ -1,15 +1,14 @@
+import { useState } from "react";
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import {  signOut } from "next-auth/react"
 import { FiLogOut } from "react-icons/fi";
-import React, { useState } from "react";
 import { addUser } from "@/store/features/user/userSlice";
 
 const Navbar = () => {
     const [openCategory, setOpenCategory] = useState(false);
     const user = useSelector((state) => state?.user?.user);
     const dispatch = useDispatch();
-    // const path = useLocation().pathname;
 
     const handleLogOut = () => {
         dispatch(addUser({}));
@@ -21,8 +20,8 @@ const Navbar = () => {
             <nav className="flex justify-between bg-white shadow-md text-gray-900">
                 <div className="px-5 relative xl:px-12 py-6 justify-between flex w-full items-center">
                     {/* Logo */}
-                    <Link className="text-3xl font-bold font-heading" href="/">
-                        Shohag PCBuilder
+                    <Link className="text-3xl italic font-bold font-heading" href="/">
+                        Shohag PCHunt
                     </Link>
                     {/* Category and Login */}
                     <div className="flex space-x-5">

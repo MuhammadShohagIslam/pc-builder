@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -10,8 +9,8 @@ const Footer = () => {
                         href=""
                         className="flex items-center mb-4 sm:mb-0"
                     >
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                           Shohag PCBuilder
+                        <span className="self-center italic text-2xl font-semibold whitespace-nowrap dark:text-white">
+                           Shohag PCHunt
                         </span>
                     </Link>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">
@@ -41,7 +40,7 @@ const Footer = () => {
                 <span className="block text-sm text-gray-500 sm:text-center ">
                     © 2023 {" "}
                     <Link href="/" className="hover:underline">
-                    Shohag PCBuilder
+                    Shohag PC Hunt
                     </Link>
                     . All Rights Reserved.
                 </span>

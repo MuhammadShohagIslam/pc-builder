@@ -19,7 +19,7 @@ const Feature = ({ product, isAddToBuilder = false }) => {
     }
 
     return (
-        <div className="rounded-lg shadow-xl group cursor-pointer">
+        <div className="rounded-lg shadow-xl group cursor-pointer mb-8">
             <div className="h-72 relative">
                 <ul className="transition duration-300 ease-in-out invisible flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:visible">
                     {isAddToBuilder ? (

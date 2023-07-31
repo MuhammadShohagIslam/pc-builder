@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Category = ({category}) => {
     return (
-        <Link href={`/category/${category}`}>
+        <Link href={`/category/${category}`} className="mb-6">
             <div
                 className="h-80 md:h-56 sm:h-52 px-5 w-full flex justify-center items-center shadow-md hover:shadow-xl transition ease-in-out delay-30 cursor-pointer"
                 // style={{
