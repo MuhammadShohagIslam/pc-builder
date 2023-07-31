@@ -7,7 +7,7 @@ const CategoryProductForPcBuilder = ({ productsByCategory, title }) => {
     return (
         <RootLayout>
             <section className="py-20">
-                <div className="container mx-auto">
+                <div className="container mx-auto md:px-0 px-4">
                     <FeaturesProduct
                         title={`Products by ${title} For Pc Builder`}
                         products={productsByCategory}

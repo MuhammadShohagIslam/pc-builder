@@ -6,7 +6,9 @@ const ReviewLists = ({ product }) => {
             <div className="flex">
                 <div className="flex-initial w-2/5 sm:w-1/2">
                     <h2 className="text-3xl sm:text-xl font-bold text-gray-900 ">
-                        Reviews
+                        Reviews<span className=" text-red-700 relative -top-1 text-[19px] font-medium ml-1 ">
+                                ({product?.ratings?.length})
+                            </span>
                     </h2>
                 </div>
             </div>

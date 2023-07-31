@@ -7,7 +7,7 @@ import { BsFillStarFill } from "react-icons/bs";
 const ReviewList = ({ ratings }) => {
     const { star, postedBy, comment, reviewedAt } = ratings;
     return (
-        <div className="grid grid-cols-10 mb-5 lg:gap-0 gap-16">
+        <div className="grid grid-cols-10 mb-5 lg:gap-8 gap-16">
             <div>
                 {postedBy?.image && postedBy && postedBy?.image?.url ? (
                     <Image

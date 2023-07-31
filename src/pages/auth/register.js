@@ -99,8 +99,8 @@ const Register = () => {
     return (
         <>
             <HeadSeo title="Register" content="" />
-            <div className="container mx-auto my-20">
-                <div className="w-[560px]  m-auto p-8  bg-gray-400 rounded-lg">
+            <div className="container mx-auto my-20 md:px-0 px-4">
+                <div className="lg:w-[560px] w-full m-auto p-8  bg-gray-400 rounded-lg">
                     <h2 className="text-center font-medium text-white text-3xl">
                         Register Now!
                     </h2>
@@ -123,10 +123,10 @@ const Register = () => {
                     </h2>
                     {registerForm()}
                     <hr className="my-4"></hr>
-                    <p className="text-primary">
+                    <p className="text-primary lg:text-left text-center">
                         If You Have Account?{" "}
                         <label
-                            className="mr-2 text-white cursor-pointer"
+                            className="mr-2 ml-2 text-white cursor-pointer"
                             onClick={() => router.push("/auth/login")}
                         >
                             Login Now
