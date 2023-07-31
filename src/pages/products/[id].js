@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import ReviewLists from "@/components/reviewLists/reviewLists";
 import RootLayout from "@/layout/RootLayout";
+import { useRouter } from "next/router";
 import db from "@/lib/db/db";
 import Product from "@/models/Product";
 import StarRatings from "react-star-ratings";
@@ -12,26 +14,37 @@ import { toast } from "react-hot-toast";
 const ProductDetails = ({ product, keyFeatureValue }) => {
     const [comment, setComment] = useState("");
     const [star, setStar] = useState(0);
+    const user = useSelector((state) => state?.user?.user);
+    const router = useRouter();
 
+    const refreshData = () => {
+        router.replace(router.asPath);
+    }
+    
     const handleClickRating = (newRating) => {
         setStar(newRating);
     };
     const handleReviewSubmit = async (event) => {
+        event.preventDefault();
         try {
-            event.preventDefault();
-            const reviewObject = {
-                comment: comment,
-                star: star,
-            };
-
-            const { data } = await axios.put(
-                `/api/product/${product._id}/review`,
-                reviewObject
-            );
-            console.log(data);
-            toast.success("Review added successfully!");
-
-            setComment("");
+            if (!user?.email) {
+                router.push("/auth/login");
+            }else{
+                const reviewObject = {
+                    comment: comment,
+                    star: star,
+                    user: user?.email,
+                };
+                if(reviewObject.comment || reviewObject.star){
+                    await axios.put(`/api/product/${product._id}/review`, reviewObject);
+                    toast.success("Review added successfully!");
+                    setComment("");
+                    setStar(0)
+                    refreshData();
+                }else{
+                    toast.error("Invalid Value!");
+                }
+            } 
         } catch (error) {
             toast.error(error.message);
         }

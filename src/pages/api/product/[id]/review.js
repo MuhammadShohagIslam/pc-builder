@@ -9,14 +9,13 @@ const router = createRouter();
 router.put(async (req, res) => {
     try {
         await db.connectDb();
-        console.log(req.query.id);
-        const { star, comment } = req.body;
+        const { star, comment, user } = req.body;
         const product = await Product.findById({
             _id: req.query.id,
         }).exec();
 
         const existingRatingObject = product.ratings.find((elem) => {
-            return elem.postedBy === req.user?.email;
+            return elem.postedBy === user;
         });
         if (existingRatingObject === undefined) {
             await Product.findByIdAndUpdate(
@@ -26,7 +25,7 @@ router.put(async (req, res) => {
                         ratings: {
                             star: star,
                             comment: comment,
-                            postedBy: "req.user?.email",
+                            postedBy: user,
                             reviewedAt: new Date(),
                         },
                     },

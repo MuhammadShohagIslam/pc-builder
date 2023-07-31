@@ -1,10 +1,20 @@
 import Link from "next/link";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import {  signOut } from "next-auth/react"
+import { FiLogOut } from "react-icons/fi";
 import React, { useState } from "react";
+import { addUser } from "@/store/features/user/userSlice";
 
 const Navbar = () => {
     const [openCategory, setOpenCategory] = useState(false);
     const user = useSelector((state) => state?.user?.user);
+    const dispatch = useDispatch();
+    // const path = useLocation().pathname;
+
+    const handleLogOut = () => {
+        dispatch(addUser({}));
+        signOut() 
+    };
 
     return (
         <section className="relative">
@@ -134,15 +144,28 @@ const Navbar = () => {
                         </div>
 
                         {user.email && (
-                            <div className="hidden xl:flex pr-2">
-                                {" "}
-                                <Link
-                                    className="flex items-center text-gray-600 hover:font-medium transition-all  hover:text-gray-800"
-                                    href="/PCBuilder"
-                                >
-                                    PC Builder
-                                </Link>
-                            </div>
+                            <>
+                                <div className="hidden xl:flex pr-2">
+                                    {" "}
+                                    <Link
+                                        className="flex items-center text-gray-600 hover:font-medium transition-all  hover:text-gray-800"
+                                        href="/PCBuilder"
+                                    >
+                                        PC Builder
+                                    </Link>
+                                </div>
+                                <div className="hidden xl:flex pr-2">
+                                    <li
+                                        onClick={handleLogOut}
+                                        className="py-2 pl-3 pr-4
+                                    text-gray-700 rounded hover:bg-gray-100
+                                    md:hover:bg-transparent md:border-0
+                                    md:hover:text-blue-700 md:p-0 cursor-pointer flex items-center justify-center"
+                                    >
+                                        <FiLogOut className="text-base" />
+                                    </li>
+                                </div>
+                            </>
                         )}
 
                         <div className="hidden xl:flex items-center space-x-4">
