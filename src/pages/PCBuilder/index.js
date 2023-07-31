@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { toast } from "react-hot-toast";
 import { useSelector, useDispatch } from "react-redux";
 import RootLayout from "@/layout/RootLayout";
-import { deleteProductForPCBuilder } from "@/store/features/product/productSlice";
+import { deleteProductForPCBuilder, deleteAllProductForPCBuilder } from "@/store/features/product/productSlice";
 import useCheckUser from "@/hooks/useCheckUser";
 
 const PCBuilder = () => {
@@ -24,6 +24,7 @@ const PCBuilder = () => {
         toast.success("You Successfully Build Your Pc!", {
             position: "top-center",
         });
+        dispatch(deleteAllProductForPCBuilder());
     };
 
     const isDisable =

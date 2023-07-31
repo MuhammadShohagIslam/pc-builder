@@ -53,8 +53,8 @@ const Feature = ({ product, isAddToBuilder = false }) => {
                 </ul>
                 <Image
                     className="h-full w-full"
-                    // src={`${images && images.length && images[0].url}`}
-                    src={`/`}
+                    src={`${product?.image}`}
+
                     alt={product?.title}
                     width={100}
                     height={100}

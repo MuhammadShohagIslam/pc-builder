@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ["www.google.com", "5.imimg.com", "www.whitmorerarebooks.com"],
+        domains: ["www.google.com", "5.imimg.com", "www.whitmorerarebooks.com", "cdn.akakce.com","productimages.hepsiburada.net", "encrypted-tbn0.gstatic.com","m.media-amazon.com"],
     },
 };
 

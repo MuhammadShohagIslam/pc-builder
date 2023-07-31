@@ -19,7 +19,7 @@ const PcBuilderProduct = ({ label, product, handleAddPcBuilder, param, handleRem
                     <div className="flex lg:px-0 px-4 lg:py-0 py-6  flex-col items-center bg-white border border-gray-200  shadow md:flex-row gap-6 hover:bg-gray-100 ">
                         <Image
                             className="object-cover rounded-t-lg h-[149px] w-56 md:rounded-none md:rounded-l-lg"
-                            src="/"
+                            src={`${product?.image}`}
                             alt=""
                             width={100}
                             height={100}

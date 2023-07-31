@@ -7,7 +7,7 @@ const initialState = {
     powerSupplyUnit: {},
     storageDevice: {},
     monitor: {},
-    all: []
+    all: [],
 };
 
 const productSlice = createSlice({
@@ -44,10 +44,22 @@ const productSlice = createSlice({
                 state.RAM = {};
             }
         },
+        deleteAllProductForPCBuilder: (state, action) => {
+            state.CPU = {};
+            state.motherboard = {};
+            state.powerSupplyUnit = {};
+            state.storageDevice = {};
+            state.monitor = {};
+            state.RAM = {};
+        },
     },
 });
 
 // Action creators are generated for each case reducer function
-export const { addProductForPCBuilder, deleteProductForPCBuilder } = productSlice.actions;
+export const {
+    addProductForPCBuilder,
+    deleteProductForPCBuilder,
+    deleteAllProductForPCBuilder,
+} = productSlice.actions;
 
 export default productSlice.reducer;
