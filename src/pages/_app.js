@@ -12,7 +12,7 @@ export default function App({
     Component,
     pageProps: { session, ...pageProps },
 }) {
-    const getLayout = Component.getLayout || ((page) => page);
+    const getLayout = Component.getLayout ?? ((page) => page);
     return getLayout(
         <>
             <SessionProvider session={session}>

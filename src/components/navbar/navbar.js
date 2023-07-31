@@ -1,8 +1,11 @@
 import Link from "next/link";
+import { useSelector } from "react-redux";
 import React, { useState } from "react";
 
 const Navbar = () => {
     const [openCategory, setOpenCategory] = useState(false);
+    const user = useSelector((state) => state?.user?.user);
+
     return (
         <section className="relative">
             <nav className="flex justify-between bg-white shadow-md text-gray-900">
@@ -16,7 +19,7 @@ const Navbar = () => {
                         <div>
                             <button
                                 onClick={() => setOpenCategory(!openCategory)}
-                                className="text-gray-800  focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center "
+                                className="text-gray-800  focus:outline-none focus:ring-blue-300  rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center "
                                 type="button"
                             >
                                 Category
@@ -129,39 +132,41 @@ const Navbar = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="hidden xl:flex pr-2">
-                            <Link
-                                className="flex items-center text-gray-600 font-bold hover:text-gray-600"
-                                href="/PCBuilder"
-                            >
-                               PC Builder 
-                            </Link>
-                        </div>
-                        <div className="hidden xl:flex items-center ">
-                            <Link
-                                className="flex items-center hover:text-gray-600"
-                                href="#"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6 hover:text-gray-700"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
+
+                        {user.email && (
+                            <div className="hidden xl:flex pr-2">
+                                {" "}
+                                <Link
+                                    className="flex items-center text-gray-600 hover:font-medium transition-all  hover:text-gray-800"
+                                    href="/PCBuilder"
                                 >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    />
-                                </svg>
-                            </Link>
+                                    PC Builder
+                                </Link>
+                            </div>
+                        )}
+
+                        <div className="hidden xl:flex items-center space-x-4">
+                            {!user.email && (
+                                <>
+                                    <Link
+                                        href="/auth/login"
+                                        className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-gray-800 md:p-0 hover:font-medium transition-all "
+                                    >
+                                        Sign In
+                                    </Link>
+
+                                    <Link
+                                        href="/auth/register"
+                                        className="block py-2 pl-3 pr-4 text-gray-800 hover:font-medium rounded hover:text-gray-800 md:p-0 transition-all "
+                                    >
+                                        Sign Up
+                                    </Link>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>
 
-              
                 <Link
                     className="navbar-burger self-center mr-12 xl:hidden"
                     href="#"

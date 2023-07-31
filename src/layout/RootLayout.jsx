@@ -1,7 +1,9 @@
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 
+
 const RootLayout = ({ children }) => {
+
     return (
         <>
             <Navbar />

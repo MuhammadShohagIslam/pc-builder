@@ -5,23 +5,21 @@ import Product from "@/models/Product";
 
 const CategoryProductForPcBuilder = ({ productsByCategory, title }) => {
     return (
-        <section className="py-20">
-            <div className="container mx-auto">
-                <FeaturesProduct
-                    title={`Products by ${title} For Pc Builder`}
-                    products={productsByCategory}
-                    isAddToBuilder
-                />
-            </div>
-        </section>
+        <RootLayout>
+            <section className="py-20">
+                <div className="container mx-auto">
+                    <FeaturesProduct
+                        title={`Products by ${title} For Pc Builder`}
+                        products={productsByCategory}
+                        isAddToBuilder
+                    />
+                </div>
+            </section>
+        </RootLayout>
     );
 };
 
 export default CategoryProductForPcBuilder;
-
-CategoryProductForPcBuilder.getLayout = function getLayout(page) {
-    return <RootLayout>{page}</RootLayout>;
-};
 
 export const getServerSideProps = async (context) => {
     const { params } = context;

@@ -5,34 +5,31 @@ import Product from "@/models/Product";
 
 const CategoryProducts = ({ productsByCategory, title }) => {
     return (
-        <section className="py-20">
-            <div className="container mx-auto">
-            <FeaturesProduct
-                title={`Products by ${title}`}
-                products={productsByCategory}
-            />
-            </div> 
-        </section>
+        <RootLayout>
+            <section className="py-20">
+                <div className="container mx-auto">
+                    <FeaturesProduct
+                        title={`Products by ${title}`}
+                        products={productsByCategory}
+                    />
+                </div>
+            </section>
+        </RootLayout>
     );
 };
 
 export default CategoryProducts;
 
-CategoryProducts.getLayout = function getLayout(page) {
-    return <RootLayout>{page}</RootLayout>;
-};
-
 export async function getStaticPaths() {
     db.connectDb();
-    let products = await Product.find()
-        .sort({ createdAt: -1 })
+    let products = await Product.find().sort({ createdAt: -1 });
 
     const paths = products.map((product) => ({
-      params: { categoryName: product.category },
-    }))
-   
-    return { paths, fallback: false }
-  }
+        params: { categoryName: product.category },
+    }));
+
+    return { paths, fallback: false };
+}
 
 export const getStaticProps = async ({ params }) => {
     db.connectDb();
@@ -45,5 +42,4 @@ export const getStaticProps = async ({ params }) => {
             title: params.categoryName,
         },
     };
-  };
-
+};
