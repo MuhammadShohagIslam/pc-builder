@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { signOut } from "next-auth/react";
 import { FiLogOut } from "react-icons/fi";
@@ -8,7 +9,7 @@ import { addUser } from "@/store/features/user/userSlice";
 const Navbar = () => {
     const [openCategory, setOpenCategory] = useState(false);
     const [openMobile, setOpenMobile] = useState(false);
-
+    const router = useRouter();
     const user = useSelector((state) => state?.user?.user);
     const dispatch = useDispatch();
 
@@ -65,7 +66,7 @@ const Navbar = () => {
                                                 }
                                             >
                                                 <Link
-                                                    className="block px-4 py-2 hover:bg-gray-100 "
+                                                    className={`block px-4 py-2 hover:bg-gray-100 ${router.pathname == "/category/CPU" ? "bg-gray-100" : ""}`}
                                                     href={`/category/CPU`}
                                                 >
                                                     CPU
@@ -80,7 +81,7 @@ const Navbar = () => {
                                             >
                                                 <Link
                                                     href={`/category/Motherboard`}
-                                                    className="block px-4 py-2 hover:bg-gray-100 "
+                                                    className={`block px-4 py-2 hover:bg-gray-100 ${router.pathname == "/category/Motherboard" ? "bg-gray-100" : ""}`}
                                                 >
                                                     Motherboard
                                                 </Link>
@@ -94,7 +95,7 @@ const Navbar = () => {
                                             >
                                                 <Link
                                                     href={`/category/RAM`}
-                                                    className="block px-4 py-2 hover:bg-gray-100 "
+                                                    className={`block px-4 py-2 hover:bg-gray-100 ${router.pathname == "/category/RAM" ? "bg-gray-100" : ""}`}
                                                 >
                                                     RAM
                                                 </Link>
@@ -108,7 +109,7 @@ const Navbar = () => {
                                             >
                                                 <Link
                                                     href={`/category/Power Supply Unit`}
-                                                    className="block px-4 py-2 hover:bg-gray-100 "
+                                                    className={`block px-4 py-2 hover:bg-gray-100 ${router.pathname == "/category/Power Supply Unit" ? "bg-gray-100" : ""}`}
                                                 >
                                                     Power Supply Unit
                                                 </Link>
@@ -122,7 +123,7 @@ const Navbar = () => {
                                             >
                                                 <Link
                                                     href={`/category/Storage Device`}
-                                                    className="block px-4 py-2 hover:bg-gray-100 "
+                                                    className={`block px-4 py-2 hover:bg-gray-100 ${router.pathname == "/category/Storage Device" ? "bg-gray-100" : ""}`}
                                                 >
                                                     Storage Device
                                                 </Link>
@@ -136,7 +137,7 @@ const Navbar = () => {
                                             >
                                                 <Link
                                                     href={`/category/Monitor`}
-                                                    className="block px-4 py-2 hover:bg-gray-100 "
+                                                    className={`block px-4 py-2 hover:bg-gray-100 ${router.pathname == "/category/Monitor" ? "bg-gray-100" : ""}`}
                                                 >
                                                     Monitor
                                                 </Link>
@@ -152,7 +153,7 @@ const Navbar = () => {
                                 <div className="hidden xl:flex pr-2">
                                     {" "}
                                     <Link
-                                        className="flex items-center text-gray-700  transition-all text-base  hover:text-green-600"
+                                        className={`flex items-center   transition-all text-base  hover:text-green-600 ${router.pathname == "/PCBuilder" ? "hover:text-green-500" : "text-gray-700"}`}
                                         href="/PCBuilder"
                                     >
                                         PC Builder
@@ -177,7 +178,7 @@ const Navbar = () => {
                                 <>
                                     <Link
                                         href="/auth/login"
-                                        className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-gray-800 md:p-0 hover:text-green-600 transition-all "
+                                        className="block py-2 pl-3 pr-4 text-gray-700 rounded  md:p-0 hover:text-green-600 transition-all "
                                     >
                                         Sign In
                                     </Link>
@@ -222,8 +223,8 @@ const Navbar = () => {
                                             <li>
                                                 {" "}
                                                 <Link
-                                                    className="flex items-center text-gray-600 hover:font-medium transition-all   mb-3"
-                                                    href="/PCBuilder"
+                                                 href="/PCBuilder"
+                                                    className={`flex items-center text-gray-600  transition-all  mb-3 ${router.pathname == "/PCBuilder" ? "hover:text-green-500" : ""}`}
                                                 >
                                                     PC Builder
                                                 </Link>
@@ -231,7 +232,7 @@ const Navbar = () => {
 
                                             <li
                                                 onClick={handleLogOut}
-                                                className="flex items-center text-gray-600 hover:font-medium transition-all  hover:text-gray-800"
+                                                className={`flex items-center text-gray-600 hover:font-medium transition-all  hover:text-gray-800`}
                                             >
                                                 <FiLogOut className="text-base" />
                                             </li>
@@ -243,7 +244,7 @@ const Navbar = () => {
                                             <li>
                                                 <Link
                                                     href="/auth/login"
-                                                    className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-gray-800 md:p-0 hover:font-medium transition-all "
+                                                    className={`block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-gray-800 md:p-0 hover:font-medium transition-all `}
                                                 >
                                                     Sign In
                                                 </Link>
@@ -251,7 +252,7 @@ const Navbar = () => {
                                             <li>
                                                 <Link
                                                     href="/auth/register"
-                                                    className="block py-2 pl-3 pr-4 text-gray-800 hover:font-medium rounded hover:text-gray-800 md:p-0 transition-all "
+                                                    className={`block py-2 pl-3 pr-4 text-gray-800 hover:font-medium rounded hover:text-gray-800 md:p-0 transition-all `}
                                                 >
                                                     Sign Up
                                                 </Link>

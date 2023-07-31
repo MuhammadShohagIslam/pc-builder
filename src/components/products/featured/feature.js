@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Tooltip } from 'react-tooltip'
 import Link from "next/link";
 import {  useDispatch } from 'react-redux'
-import _ from "lodash";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdPageview } from "react-icons/md";
 import { AvgRating } from "@/lib/utils/avgRating";
@@ -10,7 +9,6 @@ import { useRouter } from "next/router";
 import { addProductForPCBuilder } from "@/store/features/product/productSlice";
 
 const Feature = ({ product, isAddToBuilder = false }) => {
-    const isAddToCart = [];
     const router = useRouter();
     const dispatch = useDispatch()
 
@@ -39,7 +37,7 @@ const Feature = ({ product, isAddToBuilder = false }) => {
                           <label htmlFor="my-modal-3" id="isNotAddToBuilder">
                             <Link href={`/products/${product._id}`}  >
                                 <li
-                                    className={`py-3 flex bg-green-500 items-center px-3 rounded-lg ml-2 border-2 border-green-500 hover:bg-white hover:border-white hover:text-white  text-white bg-success transition ease-in-out delay-15 cursor-pointer tooltip tooltip-primary hover:text-black`}
+                                    className={`py-3 flex bg-green-500 items-center px-3 rounded-lg ml-2 border-2 border-green-500 hover:bg-white hover:border-white text-white bg-success transition ease-in-out delay-15 cursor-pointer tooltip tooltip-primary hover:text-black`}
                                    
                                 >
                                     <MdPageview  />
