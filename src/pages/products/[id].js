@@ -51,9 +51,8 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
     };
     return (
         <RootLayout>
-            {" "}
             <section className="text-gray-700 body-font overflow-hidden bg-white">
-                <div className="container px-5 py-24 mx-auto">
+                <div className="container px-5 lg:py-24 md:py-20 py-16 mx-auto">
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
                         <Image
                             alt="ecommerce"
@@ -105,11 +104,11 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
                         </div>
                     </div>
 
-                    <div className="flex w-[70%] mx-auto mt-16">
-                        <div className="flex-1">
+                    <div className="flex md:flex-row flex-col lg:w-[70%] md:w-full w-full mx-auto md:mt-16 mt-5">
+                        <div className="lg:flex-1 flex-1">
                             <ReviewLists product={product} />
                         </div>
-                        <div className="flex-2">
+                        <div className="lg:flex-2 flex-1">
                             <h3 className="text-lg font-bold text-success text-center mb-3">
                                 Review The {product?.title}
                             </h3>
@@ -162,7 +161,6 @@ export default ProductDetails;
 export async function getStaticPaths() {
     db.connectDb();
     let products = await Product.find().lean();
-
     const paths = products.map((product) => ({
         params: { id: product._id.toString() },
     }));
@@ -181,6 +179,7 @@ export const getStaticProps = async ({ params }) => {
         key: kf.split("-")[0],
         value: kf.split("-")[1],
     }));
+    
     return {
         props: {
             product: JSON.parse(JSON.stringify(product)),

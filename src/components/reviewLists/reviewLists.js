@@ -1,10 +1,8 @@
 import ReviewList from "./reviewList";
 
-const ReviewLists = ({
-    product
-}) => {
+const ReviewLists = ({ product }) => {
     return (
-        <div className="p-10 sm:p-5">
+        <div className="lg:p-10 p-3">
             <div className="flex">
                 <div className="flex-initial w-2/5 sm:w-1/2">
                     <h2 className="text-3xl sm:text-xl font-bold text-gray-900 ">
@@ -15,8 +13,8 @@ const ReviewLists = ({
             <div className="mt-10">
                 {product?.ratings?.length ? (
                     product.ratings?.map((rating) => (
-                            <ReviewList key={rating._id} ratings={rating} />
-                        ))
+                        <ReviewList key={rating._id} ratings={rating} />
+                    ))
                 ) : (
                     <span className="text-gray-500 ml-4">No Review Found</span>
                 )}
