@@ -41,5 +41,6 @@ export const getStaticProps = async ({ params }) => {
             productsByCategory: JSON.parse(JSON.stringify(products)),
             title: params.categoryName,
         },
+        revalidate: 1,
     };
 };

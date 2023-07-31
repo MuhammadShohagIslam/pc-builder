@@ -17,8 +17,6 @@ export const AvgRating = ({
         length = 0;
     }
 
-    console.log(avgRating, "avgRating");
-
     return (
    
                 <div>

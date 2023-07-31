@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import 'react-tooltip/dist/react-tooltip.css'
 import store from "@/store/app/store";
 import { Toaster } from "react-hot-toast";
 import { Provider } from "react-redux";

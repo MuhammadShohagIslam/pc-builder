@@ -57,7 +57,7 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
                         <Image
                             alt="ecommerce"
                             className="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
-                            src="/"
+                            src={product?.image}
                             width={400}
                             height={200}
                         />
@@ -185,5 +185,6 @@ export const getStaticProps = async ({ params }) => {
             product: JSON.parse(JSON.stringify(product)),
             keyFeatureValue: JSON.parse(JSON.stringify(keyFeatureValue)),
         },
+        revalidate: 1,
     };
 };

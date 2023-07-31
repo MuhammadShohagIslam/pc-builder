@@ -29,11 +29,11 @@ const Navbar = () => {
                         Shohag PCHunt
                     </Link>
                     {/* Category and Login */}
-                    <div className="flex space-x-5">
+                    <div className="flex space-x-3">
                         <div>
                             <button
                                 onClick={() => setOpenCategory(!openCategory)}
-                                className="text-gray-800  focus:outline-none focus:ring-blue-300  rounded-lg lg:text-md text-lg px-5 py-2.5 text-center inline-flex items-center "
+                                className="text-gray-800  focus:outline-none focus:ring-blue-300  rounded-lg md:text-base hover:text-green-600 text-lg px-5 py-2.5 text-center inline-flex items-center "
                                 type="button"
                             >
                                 Category
@@ -152,7 +152,7 @@ const Navbar = () => {
                                 <div className="hidden xl:flex pr-2">
                                     {" "}
                                     <Link
-                                        className="flex items-center text-gray-600 hover:font-medium transition-all  hover:text-gray-800"
+                                        className="flex items-center text-gray-700  transition-all text-base  hover:text-green-600"
                                         href="/PCBuilder"
                                     >
                                         PC Builder
@@ -164,9 +164,9 @@ const Navbar = () => {
                                         className="py-2 pl-3 pr-4
                                     text-gray-700 rounded hover:bg-gray-100
                                     md:hover:bg-transparent md:border-0
-                                    md:hover:text-blue-700 md:p-0 cursor-pointer flex items-center justify-center"
+                                    md:hover:text-gray-900 md:p-0 cursor-pointer flex items-center justify-center group hover:text-green-600"
                                     >
-                                        <FiLogOut className="text-base" />
+                                        <FiLogOut className="text-base group-hover:text-lg  transition-all" />
                                     </li>
                                 </div>
                             </>
@@ -177,14 +177,14 @@ const Navbar = () => {
                                 <>
                                     <Link
                                         href="/auth/login"
-                                        className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-gray-800 md:p-0 hover:font-medium transition-all "
+                                        className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-gray-800 md:p-0 hover:text-green-600 transition-all "
                                     >
                                         Sign In
                                     </Link>
 
                                     <Link
                                         href="/auth/register"
-                                        className="block py-2 pl-3 pr-4 text-gray-800 hover:font-medium rounded hover:text-gray-800 md:p-0 transition-all "
+                                        className="block py-2 pl-3 pr-4 text-gray-800 hover:text-green-600 rounded  md:p-0 transition-all "
                                     >
                                         Sign Up
                                     </Link>
@@ -222,7 +222,7 @@ const Navbar = () => {
                                             <li>
                                                 {" "}
                                                 <Link
-                                                    className="flex items-center text-gray-600 hover:font-medium transition-all  hover:text-gray-800 mb-3"
+                                                    className="flex items-center text-gray-600 hover:font-medium transition-all   mb-3"
                                                     href="/PCBuilder"
                                                 >
                                                     PC Builder

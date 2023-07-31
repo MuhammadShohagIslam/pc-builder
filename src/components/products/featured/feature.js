@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Tooltip } from 'react-tooltip'
 import Link from "next/link";
 import {  useDispatch } from 'react-redux'
 import _ from "lodash";
@@ -23,32 +24,31 @@ const Feature = ({ product, isAddToBuilder = false }) => {
             <div className="h-72 relative">
                 <ul className="transition duration-300 ease-in-out invisible flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:visible">
                     {isAddToBuilder ? (
+                        <>
                         <li
-                            className={`py-3 flex bg-gray-700 items-center px-3 rounded-lg ml-2 border-2 border-success hover:bg-gray-900 hover:border-gray-900 hover:text-white  text-white ${
-                                isAddToCart?.length > 0
-                                    ? "bg-primary"
-                                    : "bg-success"
-                            } bg-success transition ease-in-out delay-15 cursor-pointer tooltip tooltip-primary`}
-                            data-tip={
-                                isAddToCart?.length > 0
-                                    ? "Already To Cart"
-                                    : "Add Product For PCBuilder"
-                            }
+                            className={`py-3 flex bg-green-500 items-center px-3 rounded-lg ml-2 border-2 border-green-500 hover:bg-white hover:border-white hover:text-black  text-white  bg-success transition ease-in-out delay-15 cursor-pointer tooltip tooltip-primary`}
+                            id="isAddToBuilder"
                             onClick={() => handleAddProductForPCBuilder(product)}
                         >
                             <FaShoppingCart />
                         </li>
+                        <Tooltip anchorSelect="#isAddToBuilder" content={`Add Product For PCBuilder`}/>
+                        </>
                     ) : (
-                        <label htmlFor="my-modal-3">
-                            <Link href={`/products/${product._id}`}>
+                        <>
+                          <label htmlFor="my-modal-3" id="isNotAddToBuilder">
+                            <Link href={`/products/${product._id}`}  >
                                 <li
-                                    className={`py-3 flex bg-gray-700 items-center px-3 rounded-lg ml-2 border-2 border-gray-700 hover:bg-gray-900 hover:border-gray-900 hover:text-white  text-white bg-success transition ease-in-out delay-15 cursor-pointer tooltip tooltip-primary`}
-                                    data-tip={"Details Product"}
+                                    className={`py-3 flex bg-green-500 items-center px-3 rounded-lg ml-2 border-2 border-green-500 hover:bg-white hover:border-white hover:text-white  text-white bg-success transition ease-in-out delay-15 cursor-pointer tooltip tooltip-primary hover:text-black`}
+                                   
                                 >
-                                    <MdPageview fill="#fff" />
+                                    <MdPageview  />
                                 </li>
                             </Link>
                         </label>
+                        <Tooltip anchorSelect="#isNotAddToBuilder" content={`Details Product`}/>
+                        </>
+                      
                     )}
                 </ul>
                 <Image

@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const PcBuilderProduct = ({ label, product, handleAddPcBuilder, param, handleRemovedPcBuilder }) => {
     return (
-        <div className="flex lg:gap-5 gap-1 shadow-lg lg:mb-6 mb-3 border-2 border-gray-300 ">
-            <div className="lg:w-[30%] w-1/2  border-2 border-gray-300 h-full p-8">
+        <div className="flex lg:gap-5  bg-white gap-1 shadow-lg lg:mb-6 mb-3 border-2 border-gray-300 ">
+            <div className="lg:w-[30%] w-1/2 h-full p-8">
                 <h2 className="font-bold text-gray-700 text-base ">{label}</h2>
                 <button
                     onClick={() => handleAddPcBuilder(param)}
@@ -16,7 +16,7 @@ const PcBuilderProduct = ({ label, product, handleAddPcBuilder, param, handleRem
             </div>
             <div className="lg:w-[70%] w-1/2 ">
                 {product?.category ? (
-                    <div className="flex lg:px-0 px-4 lg:py-0 py-6  flex-col items-center bg-white border border-gray-200  shadow md:flex-row gap-6 hover:bg-gray-100 ">
+                    <div className="flex lg:px-0 px-4 lg:py-0 py-6  flex-col items-center bg-white border border-gray-200  shadow md:flex-row gap-6">
                         <Image
                             className="object-cover rounded-t-lg h-[149px] w-56 md:rounded-none md:rounded-l-lg"
                             src={`${product?.image}`}
