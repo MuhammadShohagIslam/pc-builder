@@ -1,14 +1,15 @@
+import { createRouter } from "next-connect";
+// import auth from "@/middleware/auth";
 import db from "@/lib/db/db";
 import Product from "@/models/Product";
-import nextHandler from "next-connect";
 
 
-const handler = nextHandler();
+const router = createRouter();
 
-handler.put(async (req, res) => {
+router.put(async (req, res) => {
     try {
         await db.connectDb();
-        console.log(req.query.id)
+        console.log(req.query.id);
         const { star, comment } = req.body;
         const product = await Product.findById({
             _id: req.query.id,
@@ -35,7 +36,7 @@ handler.put(async (req, res) => {
             res.json(product);
         } else {
             // if user have already left rating, update it
-           await Product.updateOne(
+            await Product.updateOne(
                 {
                     ratings: { $elemMatch: existingRatingObject },
                 },
@@ -57,4 +58,17 @@ handler.put(async (req, res) => {
     }
 });
 
-export default handler;
+// this will run if none of the above matches
+router.all((req, res) => {
+    res.status(405).json({
+        error: "Method not allowed",
+    });
+});
+
+export default router.handler({
+    onError(err, req, res) {
+        res.status(400).json({
+            error: err.message,
+        });
+    },
+});

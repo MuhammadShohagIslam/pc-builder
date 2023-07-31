@@ -24,7 +24,7 @@ const PCBuilder = () => {
         })
     };
 
-    const isDisable = !product.CPU.title || !product.motherboard.title || !product.powerSupplyUnit.title || !product.RAM.title || !product.storageDevice.title || !product.monitor.title
+    const isDisable = !product?.CPU?.title || !product?.motherboard?.title || !product?.powerSupplyUnit?.title || !product?.RAM?.title || !product?.storageDevice?.title || !product?.monitor?.title
 
     return (
         <section className="w-[60%] mx-auto py-24 md:py-20 sm:py-12">
@@ -84,7 +84,7 @@ const PCBuilder = () => {
                     type="button"
                     className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-0 focus:outline-none focus:ring-lime-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 mt-3 cursor-pointer disabled:cursor-not-allowed"
                 >
-                    Complete Your Process of Building Computer
+                    Complete Build
                 </button>
             </div>
         </section>

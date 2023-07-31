@@ -1,16 +1,28 @@
+import "@/styles/globals.css";
 import store from "@/store/app/store";
 import { Toaster } from "react-hot-toast";
 import { Provider } from "react-redux";
-import "@/styles/globals.css";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistStore } from "redux-persist";
+import { SessionProvider } from "next-auth/react";
 
-export default function App({ Component, pageProps }) {
+let persistor = persistStore(store);
+
+export default function App({
+    Component,
+    pageProps: { session, ...pageProps },
+}) {
     const getLayout = Component.getLayout || ((page) => page);
     return getLayout(
         <>
-            <Toaster position="top-right" reverseOrder={false} />
-            <Provider store={store}>
-                <Component {...pageProps} />
-            </Provider>
+            <SessionProvider session={session}>
+                <Provider store={store}>
+                    <PersistGate loading={null} persistor={persistor}>
+                        <Toaster position="top-right" reverseOrder={false} />
+                        <Component {...pageProps} />
+                    </PersistGate>
+                </Provider>
+            </SessionProvider>
         </>
     );
 }

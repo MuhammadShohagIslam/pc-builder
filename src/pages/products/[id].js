@@ -59,7 +59,7 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
                                 USD {product?.price}{" "}
                             </span>
                             <span className="flex ml-3 pl-3 border-l-2 border-gray-200">
-                                <AvgRating product={product} />
+                                <AvgRating product={product}/>
                             </span>
                         </div>
                         <p className="leading-relaxed mt-9">

@@ -8,7 +8,7 @@ import Product from "@/models/Product";
 export default function Home({ allProducts }) {
     return (
         <section className="py-20">
-            <FeaturesProduct title={"Featured Products"} products={allProducts}/>
+            <FeaturesProduct title={"Featured Products"} products={allProducts} />
             <Categories categoriesData={allProducts}/>
         </section>
     );

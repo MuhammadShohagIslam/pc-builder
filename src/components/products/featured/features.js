@@ -10,7 +10,7 @@ const FeaturesProduct = ({ products, title, isAddToBuilder=false }) => {
             </div>
             <div className="grid grid-cols-4 gap-5 mb-12">
                 {products?.slice(0, 6).map((product) => (
-                    <Feature key={product._id} product={product} isAddToBuilder={isAddToBuilder}/>
+                    <Feature  key={product._id} product={product} isAddToBuilder={isAddToBuilder}/>
                 ))}
             </div>
         </section>

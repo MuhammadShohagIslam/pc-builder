@@ -1,15 +1,24 @@
-import { configureStore } from '@reduxjs/toolkit';
-import productReducer from '../features/product/productSlice';
-import { baseApi } from "../api/baseApi";
+import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers } from "redux";
+import thunk from "redux-thunk";
+import storage from "redux-persist/lib/storage";
+import { persistReducer } from "redux-persist";
+
+import productReducer from "../features/product/productSlice";
+
+const reducers = combineReducers({ product: productReducer });
+
+const config = {
+    key: "root",
+    storage,
+};
+
+const reducer = persistReducer(config, reducers);
 
 const store = configureStore({
-  reducer: {
-    product: productReducer,
-    [baseApi.reducerPath]: baseApi.reducer,
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(baseApi.middleware),
+    reducer: reducer,
+    devTools: process.env.NODE_ENV !== "production",
+    middleware: [thunk],
 });
-
 
 export default store;
