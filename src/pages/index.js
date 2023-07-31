@@ -1,4 +1,5 @@
 import Categories from "@/components/categories/categories";
+import Banner from "@/components/banner/banner";
 import FeaturesProduct from "@/components/products/featured/features";
 import RootLayout from "@/layout/RootLayout";
 import db from "@/lib/db/db";
@@ -20,7 +21,8 @@ export default function Home({ allProducts }) {
 
     return (
         <RootLayout>
-            <section className="py-20">
+            <Banner name="Shohag Pc Showroom"/>
+            <section className="py-28 container mx-auto">
                 <FeaturesProduct
                     title={"Featured Products"}
                     products={allProducts}
