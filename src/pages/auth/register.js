@@ -98,7 +98,7 @@ const Register = () => {
     );
     return (
         <>
-            <HeadSeo title="Register" content="" />
+            <HeadSeo title="Register" content="Register Page" />
             <div className="container mx-auto my-20 md:px-0 px-4">
                 <div className="lg:w-[560px] w-full m-auto p-8  bg-gray-400 rounded-lg">
                     <h2 className="text-center font-medium text-white text-3xl">

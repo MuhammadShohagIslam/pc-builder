@@ -1,21 +1,25 @@
 import FeaturesProduct from "@/components/products/featured/features";
 import RootLayout from "@/layout/RootLayout";
 import db from "@/lib/db/db";
+import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import Product from "@/models/Product";
 
 const CategoryProductForPcBuilder = ({ productsByCategory, title }) => {
     return (
-        <RootLayout>
-            <section className="py-20">
-                <div className="container mx-auto md:px-0 px-4">
-                    <FeaturesProduct
-                        title={`Products by ${title} For Pc Builder`}
-                        products={productsByCategory}
-                        isAddToBuilder
-                    />
-                </div>
-            </section>
-        </RootLayout>
+        <>
+            <HeadSeo title="Pc Builder Products" content="Pc Builder Products Page" />
+            <RootLayout>
+                <section className="py-20">
+                    <div className="container mx-auto md:px-0 px-4">
+                        <FeaturesProduct
+                            title={`Products by ${title} For Pc Builder`}
+                            products={productsByCategory}
+                            isAddToBuilder
+                        />
+                    </div>
+                </section>
+            </RootLayout>
+        </>
     );
 };
 

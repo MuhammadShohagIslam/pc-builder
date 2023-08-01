@@ -8,6 +8,7 @@ import Product from "@/models/Product";
 import { useDispatch } from "react-redux";
 import { addUser } from "@/store/features/user/userSlice";
 import { useEffect } from "react";
+import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 
 export default function Home({ allProducts }) {
     const { data: session } = useSession();
@@ -20,16 +21,22 @@ export default function Home({ allProducts }) {
     }, [session, dispatch]);
 
     return (
-        <RootLayout>
-            <Banner name="Shohag Pc Showroom"/>
-            <section className="lg:py-28 md:py-14 py-16 container mx-auto md:px-0 px-4">
-                <FeaturesProduct
-                    title={"Featured Products"}
-                    products={allProducts}
-                />
-                <Categories categoriesData={allProducts} />
-            </section>
-        </RootLayout>
+        <>
+            <HeadSeo
+                title="Shohag Pc Hunt"
+                content="Pc Builder Products Showroom"
+            />
+            <RootLayout>
+                <Banner name="Shohag Pc Showroom" />
+                <section className="lg:py-28 md:py-14 py-16 container mx-auto md:px-0 px-4">
+                    <FeaturesProduct
+                        title={"Featured Products"}
+                        products={allProducts}
+                    />
+                    <Categories categoriesData={allProducts} />
+                </section>
+            </RootLayout>
+        </>
     );
 }
 

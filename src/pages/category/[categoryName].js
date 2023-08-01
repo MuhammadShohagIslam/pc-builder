@@ -1,20 +1,24 @@
 import FeaturesProduct from "@/components/products/featured/features";
 import RootLayout from "@/layout/RootLayout";
 import db from "@/lib/db/db";
+import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import Product from "@/models/Product";
 
 const CategoryProducts = ({ productsByCategory, title }) => {
     return (
-        <RootLayout>
-            <section className="py-20">
-                <div className="container mx-auto md:px-0 px-4">
-                    <FeaturesProduct
-                        title={`Products by ${title}`}
-                        products={productsByCategory}
-                    />
-                </div>
-            </section>
-        </RootLayout>
+        <>
+            <HeadSeo title="Category Products" content="Category Products Page" />
+            <RootLayout>
+                <section className="py-20">
+                    <div className="container mx-auto md:px-0 px-4">
+                        <FeaturesProduct
+                            title={`Products by ${title}`}
+                            products={productsByCategory}
+                        />
+                    </div>
+                </section>
+            </RootLayout>
+        </>
     );
 };
 
