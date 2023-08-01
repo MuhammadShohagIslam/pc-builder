@@ -1,39 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h2 align="center">I am Muhammad Jhohirul Islam Shohag</h2>
+<p align="center">I am Full-Stack Developer</p>
 
-## Getting Started
+# Let's Talk About My Shohag PCHunt Application
 
-First, run the development server:
+### Shohag PCHunt Application Live: [https://pc-builder-seven.vercel.app/](https://pc-builder-seven.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Email: admin@gmail.com
+### Password: 123456
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Description About My Project
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+-   ### Home Page
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<div align="center">
+    <img width="800" src="https://github.com/MuhammadShohagIslam/pc-builder/blob/main/preview/home.png">
+</div> 
+ 
+<p>On the home page, we can get the feature products,  featured categories under the featured product section and footer</p>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+-   ### Featured Category Products Page
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<div align="center">
+    <img width="450" src="https://github.com/MuhammadShohagIslam/pc-builder/blob/main/preview/categoryPRoducts.png">
+</div>  
+<p>On the Featured Category Products Page, we have products under each category</p>
 
-## Learn More
+-   ### Product Detail Page 
 
-To learn more about Next.js, take a look at the following resources:
+<div align="center">
+    <img width="450" src="https://github.com/MuhammadShohagIslam/pc-builder/blob/main/preview/product-details.png">
+</div> 
+<p>On the Product Detail Page , we can get the product details </p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   ### PC Builder Page 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<div align="center">
+    <img width="450" src="https://github.com/MuhammadShohagIslam/pc-builder/blob/main/preview/pc-build.png">
+</div> 
+<p>On the PC Builder Page  , we can build your pc on this page </p>
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-"# pc-builder" 
+# Let's See Which Technology use of our project
+- HTML
+- CSS
+- NEXTJS
+- Twilwind CSS
+- Axios
+- React-Icons
+- React-hot-toast
+- React-hook-form
+- React-tooltip
+- Next Auth
+- Next connect

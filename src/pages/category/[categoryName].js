@@ -10,7 +10,7 @@ const CategoryProducts = ({ productsByCategory, title }) => {
             <HeadSeo title="Category Products" content="Category Products Page" />
             <RootLayout>
                 <section className="py-20">
-                    <div className="container mx-auto md:px-0 px-4">
+                    <div className="container mx-auto md:px-12 px-4">
                         <FeaturesProduct
                             title={`Products by ${title}`}
                             products={productsByCategory}
