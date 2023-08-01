@@ -23,7 +23,6 @@ const Login = () => {
     } = useForm();
 
     const router = useRouter();
-    const { redirect } = router.query;
 
     // useEffect(() => {
     //     if (user) {
@@ -43,11 +42,11 @@ const Login = () => {
                 email,
                 password,
             });
-            console.log(data, "data register");
             dispatch(addUser({ email: data?.user }));
             toast.success("Successfully Login!");
             setLoadingLogin(false);
-            router.push(redirect || "/");
+            reset()
+            router.push("/");
         } catch (error) {
             dispatch(addUser({}));
             toast.success("Login Failed!");

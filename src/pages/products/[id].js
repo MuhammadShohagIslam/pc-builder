@@ -13,6 +13,7 @@ import { toast } from "react-hot-toast";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 
 const ProductDetails = ({ product, keyFeatureValue }) => {
+    const [loading, setLoading] = useState(false);
     const [comment, setComment] = useState("");
     const [star, setStar] = useState(0);
     const user = useSelector((state) => state?.user?.user);
@@ -27,8 +28,10 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
     };
     const handleReviewSubmit = async (event) => {
         event.preventDefault();
+        setLoading(true);
         try {
             if (!user?.email) {
+                setLoading(false);
                 router.push("/auth/login");
             } else {
                 const reviewObject = {
@@ -45,8 +48,10 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
                     setComment("");
                     setStar(0);
                     refreshData();
+                    setLoading(false);
                 } else {
                     toast.error("Invalid Value!");
+                    setLoading(false);
                 }
             }
         } catch (error) {
@@ -151,10 +156,13 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
                                     />
                                     <div className="mt-5">
                                         <button
+                                            disabled={loading}
                                             type="submit"
                                             className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-0 focus:outline-none focus:ring-lime-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                                         >
-                                            Review Submit
+                                            {loading
+                                                ? "Loading..."
+                                                : " Review Submit"}
                                         </button>
                                     </div>
                                 </form>
@@ -196,6 +204,6 @@ export const getStaticProps = async ({ params }) => {
             product: JSON.parse(JSON.stringify(product)),
             keyFeatureValue: JSON.parse(JSON.stringify(keyFeatureValue)),
         },
-        revalidate: 1,
+        revalidate: 5,
     };
 };

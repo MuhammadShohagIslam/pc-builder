@@ -36,17 +36,18 @@ const Register = () => {
         try {
             setLoading(true);
             const { data } = await axios.post("/api/auth/register", {
-              email,
-              password,
+                email,
+                password,
             });
             dispatch(addUser({ email: data?.user }));
-            toast.success("Successfully Register!")
+            toast.success("Successfully Register!");
             setLoading(false);
-            router.push(redirect || "/")
-          } catch (error) {
+            reset();
+            router.push("/");
+        } catch (error) {
             setLoading(false);
-            dispatch(addUser({ }));
-          }
+            dispatch(addUser({}));
+        }
     };
 
     const registerForm = () => (
@@ -107,9 +108,11 @@ const Register = () => {
 
                     <div className="flex justify-center mt-8">
                         <button
-                          onClick={() => signIn("github", {
-                            callbackUrl: "http://localhost:3000/"
-                          })}
+                            onClick={() =>
+                                signIn("github", {
+                                    callbackUrl: "http://localhost:3000/",
+                                })
+                            }
                             type="button"
                             className="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center   mr-2 mb-2"
                         >
