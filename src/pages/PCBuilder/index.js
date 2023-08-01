@@ -43,7 +43,7 @@ const PCBuilder = () => {
         <>
             <HeadSeo title="Pc Builder" content="Pc Builder Page" />
             <RootLayout>
-                <section className="lg:w-[60%] w-full md:px-0 px-4 mx-auto lg:py-24 md:py-20 py-12">
+                <section className="lg:w-[60%] w-full md:px-12 px-4 mx-auto lg:py-24 md:py-20 py-12">
                     <div className="w-full flex items-center justify-center lg:pb-16 pb-9">
                         <h2 className="text-3xl font-bold text-gray-800 border-b-2 border-gray-500">
                             Build Your Computer

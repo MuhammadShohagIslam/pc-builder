@@ -28,7 +28,7 @@ export default function Home({ allProducts }) {
             />
             <RootLayout>
                 <Banner name="Shohag Pc Showroom" />
-                <section className="lg:py-28 md:py-14 py-16 container mx-auto md:px-0 px-4">
+                <section className="lg:py-28 md:py-14 py-16 container mx-auto md:px-12 px-4">
                     <FeaturesProduct
                         title={"Featured Products"}
                         products={allProducts}

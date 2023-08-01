@@ -58,7 +58,7 @@ const ProductDetails = ({ product, keyFeatureValue }) => {
             <HeadSeo title="Product Details" content="Product Details Page" />
             <RootLayout>
                 <section className="text-gray-700 body-font overflow-hidden bg-white">
-                    <div className="container px-5 lg:py-24 md:py-20 py-16 mx-auto">
+                    <div className="container lg:px-12 px-5 lg:py-24 md:py-20 py-16 mx-auto">
                         <div className="lg:w-4/5 mx-auto flex flex-wrap">
                             <Image
                                 alt="ecommerce"
